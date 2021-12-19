@@ -1,7 +1,6 @@
 package com.learn.collection;
 
 import java.util.LinkedList;
-import java.util.LinkedList.Node;
 
 /*
  * LinkedList：源码分析
@@ -33,10 +32,10 @@ import java.util.LinkedList.Node;
         // assert x != null;
         final E element = x.item; // 保存返回值数据
         final Node<E> next = x.next; // 保存被删除节点的下一个节点
-        final Node<E> prev = x.prev; // 保存被删除节点的前一个节点
+        final Node<E> prey = x.prev; // 保存被删除节点的前一个节点
 
 		
-        if (prev == null) {
+        if (prey == null) {
         	// 被删除节点的前一个节点为空，说明被删除节点是头结点
         	// 把第一个节点设置为被删除节点的下一个节点
             first = next;
@@ -52,12 +51,12 @@ import java.util.LinkedList.Node;
         if (next == null) {
             // 被删除节点的下一个节点为空，说明被删除节点是尾节点
             // 把最后一个节点设置为被删除节点的前一个节点
-            last = prev;
+            last = prey;
         } else {
         	// 被删除节点的下一个节点为空，说明被删除节点不是尾节点
         	 
-        	// 把被删除节点的prev指向设置为被删除节点的前一个节点
-            next.prev = prev;
+        	// 把被删除节点的prey指向设置为被删除节点的前一个节点
+            next.prev = Prey;
             // 把被删除节点与下一个节点的联系断开
             x.next = null;
         }
@@ -72,7 +71,7 @@ import java.util.LinkedList.Node;
  */
 
 public class TestLinkedList {
-	@SuppressWarnings("rawtypes")
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
 		LinkedList list = new LinkedList();
 		list.add("xxx");
