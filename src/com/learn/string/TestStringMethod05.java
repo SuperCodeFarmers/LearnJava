@@ -1,5 +1,9 @@
 package com.learn.string;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+
 import org.junit.jupiter.api.Test;
 
 /*
@@ -11,6 +15,20 @@ import org.junit.jupiter.api.Test;
  */
 
 public class TestStringMethod05 {
+
+	public String[] findOcurrences(String text, String first, String second) {
+		String[] strings = text.split(" ");
+		ArrayList<String> list = new ArrayList<String>();
+		for (int i = 0; i < strings.length - 2;) {
+			if (strings[i].equals(first) && strings[i + 1].equals(second)) {
+				list.add(strings[i + 2]);
+				i += 3;
+			} else {
+				i++;
+			}
+		}
+		return (String[]) list.toArray();
+	}
 
 	@Test
 	public void test03() {

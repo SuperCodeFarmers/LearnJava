@@ -51,6 +51,6 @@ public class TestStringBuilderBuffer {
 		
 		StringBuffer sBuffer = new StringBuffer();
 		sBuffer.append("123123123");
-		sBuffer.insert(0, false)
+		sBuffer.insert(0, false);
 	}
 }

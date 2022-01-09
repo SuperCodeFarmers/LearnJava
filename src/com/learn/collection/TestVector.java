@@ -31,12 +31,13 @@ public class TestVector {
 
 	@Test
 	public void test1() {
+		@SuppressWarnings("rawtypes")
 		Vector<Integer> v = new Vector();
 		
 		v.add(1);
 		v.insertElementAt(2, 1);
 		v.remove(0);
-		v.remove(v)
+		v.remove(v);
 	}
 
 }
