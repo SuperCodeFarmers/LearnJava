@@ -1,0 +1,14 @@
+/*
+ * 文件的IO操作：
+ * Reader系列：
+ * （1）int read()：读取单个字符。正常返回Unicode编码值
+ * （2）int read(char[] cbuf)：将字符读入一个数组。  
+ * （3）abstract int read(char[] cbuf, int off, int len)：读取多个字符，读取的字符放到cbuf数组中，从cbuf的[off]开始存储，最多读取len个。  
+
+ * 
+ * 一、读取一个纯文本的文件
+ * 步骤：
+ * (1)选择IO流，创建IO流对象
+ * (2)读/写操作
+ * (3)关闭IO流，释放资源
+ */
